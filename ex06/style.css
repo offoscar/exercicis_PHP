@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 1.2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0.4rem 0 0;
+    color: white;
+}
+
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+article {
+    background: white;
+    border: 1px solid rgb(252, 239, 239);
+    padding: 1.5rem;
+}
+
+article h2 {
+    margin-top: 0;
+    color: #111;
+    font-size: 1.8rem;
+}
+
+.descripcio {
+    color: #444;
+    font-style: italic;
+}
+
+.preu,
+.estoc,
+.ref {
+    margin: 0.5rem 0;
+    color: #222;
+}
+
+.total {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #333;
+    background: rgb(205, 198, 198);
+    border-top: 1px solid rgb(209, 208, 208);
+}
