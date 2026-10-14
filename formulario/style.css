@@ -1,0 +1,153 @@
+:root {
+    --card: #ffffff;
+    --primary: #176b5b;
+    --primary-dark: #105447;
+    --text: #20312d;
+    --muted: #63736f;
+    --border: #d6e2de;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: clamp(2rem, 7vh, 4rem) 1rem;
+    background:
+        radial-gradient(ellipse at top left, #e4f3ed 0%, transparent 48%),
+        #f4f7f5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.7rem, 4vw, 2.25rem);
+    color: var(--text);
+}
+
+form,
+.result {
+    width: min(100%, 520px);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background: var(--card);
+    border: 1px solid #e5ece9;
+    border-radius: 16px;
+    box-shadow: 0 14px 40px rgba(31, 73, 62, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.field {
+    display: grid;
+    gap: 0.45rem;
+}
+
+label {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(23, 107, 91, 0.14);
+}
+
+button {
+    min-height: 48px;
+    margin-top: 0.2rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: var(--primary-dark);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.result {
+    display: grid;
+    gap: 1rem;
+}
+
+.received-email {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    background: #eaf4f0;
+    overflow-wrap: anywhere;
+}
+
+.data-section h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.05rem;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #e5ece9;
+    border-radius: 8px;
+    background: #f7faf8;
+    color: #334640;
+    font: 0.9rem/1.5 Consolas, "Courier New", monospace;
+}
+
+.back-link {
+    justify-self: start;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.back-link:hover {
+    color: var(--primary-dark);
+}
+
+.result > p {
+    margin: 0;
+}
