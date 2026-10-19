@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulari</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>Inscripció al festival</h1>
-    <form action="pas2-resultat.php" method="post">
+    <form action="pas3-resultat.php" method="post">
         <label for="nom">Nom</label>
         <input id="nom" name="nom">
 
@@ -19,9 +19,20 @@
 
         <label for="dia">Dia</label>
         <select id="dia" name="dia">
-            <option value="divendres">Divendres</option>
-            <option value="dissabte">Dissabte</option>
+            <option value="divendres">Lunes</option>
+            <option value="dissabte">Martes</option>
+            <option value="divendres">Miercoles</option>
+            <option value="dissabte">Jueves</option>
+            <option value="divendres">Viernes</option>
+            <option value="dissabte">Sabado</option>
+            <option value="divendres">Domingo</option>
         </select>
+
+        <label for="telefon">Telefon</label>
+        <input id="telefon" name="telefon" type="tel">
+
+        <label for="direccio">Direcció</label>
+        <input id="direccio" name="direccio" type="text">
 
         <button type="submit">Enviar</button>
     </form>

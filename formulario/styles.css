@@ -1,0 +1,286 @@
+:root {
+    color-scheme: light;
+    --ink: #142923;
+    --muted: #687c75;
+    --green: #087f5b;
+    --green-dark: #065f46;
+    --lime: #c7f36b;
+    --line: #dce8e2;
+    --focus: rgba(8, 127, 91, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background: #08251e;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0;
+    padding: clamp(3rem, 9vh, 6rem) 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow-x: hidden;
+    background:
+        radial-gradient(ellipse at 12% 12%, rgba(28, 150, 103, 0.34), transparent 34rem),
+        radial-gradient(ellipse at 90% 82%, rgba(159, 204, 71, 0.16), transparent 30rem),
+        linear-gradient(145deg, #09241e 0%, #10372c 48%, #071e19 100%);
+    color: #f6fff9;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body::before,
+body::after {
+    position: fixed;
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+}
+
+body::before {
+    top: -10rem;
+    right: -8rem;
+    width: 32rem;
+    aspect-ratio: 1;
+    border: 1px solid rgba(210, 255, 227, 0.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 3rem rgba(210, 255, 227, 0.025),
+        0 0 0 7rem rgba(210, 255, 227, 0.02);
+}
+
+body::after {
+    inset: 0;
+    opacity: 0.12;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.7) 0.65px, transparent 0.65px);
+    background-size: 7px 7px;
+    mask-image: linear-gradient(to bottom, #000, transparent 85%);
+}
+
+h1 {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: -0.065em;
+    text-wrap: balance;
+    text-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
+    animation: title-enter 700ms both;
+}
+
+h1::before {
+    display: block;
+    margin-bottom: 0.9rem;
+    color: var(--lime);
+    content: "FESTIVAL  /  INSCRIPCIONS";
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+}
+
+h1::after {
+    display: block;
+    width: 4rem;
+    height: 4px;
+    margin: 1.15rem auto 0;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--lime), #57d7a0);
+    content: "";
+}
+
+form {
+    position: relative;
+    width: min(100%, 540px);
+    display: grid;
+    gap: 0.7rem;
+    padding: clamp(1.5rem, 5vw, 2.6rem);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.3),
+        0 8px 24px rgba(4, 34, 24, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    color: var(--ink);
+    animation: card-enter 750ms 100ms both;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+form::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 6px;
+    background: linear-gradient(90deg, #087f5b, #6bcf75 55%, #c7f36b);
+    content: "";
+}
+
+form:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 42px 100px rgba(0, 0, 0, 0.34),
+        0 12px 30px rgba(4, 34, 24, 0.2);
+}
+
+label {
+    margin-top: 0.65rem;
+    color: #294139;
+    font-size: 0.9rem;
+    font-weight: 750;
+    letter-spacing: 0.01em;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 51px;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    outline: none;
+    background-color: #f8fbf9;
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+input:hover,
+select:hover {
+    border-color: #b4d0c2;
+    background-color: #fff;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--green);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px var(--focus);
+    transform: translateY(-1px);
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+    appearance: none;
+}
+
+select {
+    cursor: pointer;
+}
+
+button {
+    position: relative;
+    min-height: 54px;
+    margin-top: 1rem;
+    padding: 0.9rem 1.25rem;
+    overflow: hidden;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(110deg, var(--green-dark), var(--green) 60%, #13a675);
+    color: #fff;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: 0 9px 20px rgba(8, 127, 91, 0.25);
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+button::after {
+    position: absolute;
+    top: -70%;
+    left: -35%;
+    width: 22%;
+    height: 240%;
+    background: rgba(255, 255, 255, 0.22);
+    content: "";
+    transform: rotate(25deg);
+    transition: left 350ms ease;
+}
+
+button:hover {
+    filter: saturate(1.15) brightness(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 27px rgba(8, 127, 91, 0.32);
+}
+
+button:hover::after {
+    left: 115%;
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 12px rgba(8, 127, 91, 0.24);
+}
+
+button:focus-visible {
+    outline: 3px solid #86e0b8;
+    outline-offset: 4px;
+}
+
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes title-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding-top: 10vh;
+        padding-bottom: 2rem;
+    }
+
+    form {
+        border-radius: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
