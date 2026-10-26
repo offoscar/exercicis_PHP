@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #EEF2F3;
+    color: #22303A;
+    margin: 0;
+    padding: 1.5rem 1rem;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #1F6F78;
+}
+
+h2 {
+    color: #1F6F78;
+}
+
+.subtitol {
+    text-align: center;
+    margin: .25rem 0 1.5rem;
+}
+
+.contenidor {
+    max-width: 560px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 1.5rem 2rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+}
+
+fieldset {
+    border: 1px solid #B8C7CB;
+    border-radius: 6px;
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+legend {
+    font-weight: bold;
+    color: #1F6F78;
+    padding: 0 .5rem;
+}
+
+label {
+    display: block;
+    margin-top: .75rem;
+    margin-bottom: .25rem;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+input[type="date"], input[type="tel"], select {
+    width: 100%;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+.grup {
+    margin: 1rem 0 .25rem;
+    font-weight: bold;
+}
+
+label.linia {
+    font-weight: normal;
+    margin: .25rem 0;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: .75rem;
+    background: #1F6F78;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+button[type="submit"]:hover {
+    background: #14494F;
+}
+
+.errors {
+    background: #FDECEC;
+    border-left: 4px solid #C0392B;
+    padding: .5rem 1rem 1rem;
+    border-radius: 4px;
+}
+
+.errors h2 {
+    color: #C0392B;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: .5rem .75rem;
+    border-bottom: 1px solid #D5DEE0;
+}
+
+thead th {
+    background: #1F6F78;
+    color: #FFFFFF;
+}
+
+tbody tr:nth-child(even) th,
+tbody tr:nth-child(even) td {
+    background: #F4F7F7;
+}
