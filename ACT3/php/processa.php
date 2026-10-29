@@ -17,7 +17,6 @@ $usuari = [
     'codipostal' => trim($_POST['codipostal'] ?? ''),
     'tipus'      => trim($_POST['tipus'] ?? ''),
     'origen'     => trim($_POST['origen'] ?? ''),
-
     'butlleti'   => isset($_POST['butlleti']) ? 'Si' : 'No',
     'condicions' => isset($_POST['condicions']) ? 'Si' : 'No',
 ];
